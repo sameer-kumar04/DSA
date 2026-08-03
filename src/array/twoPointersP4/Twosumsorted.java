@@ -4,22 +4,18 @@ public class Twosumsorted {
     public static void main(String[] args) {
         int[] arr = {2,7,11,15};
 
-        printArray(findTwoSum(arr,9));
+        printArray(findTwoSum(arr,18));
     }
 
     public static int[] findTwoSum(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
-        int[] answer = new int[2];
 
         while ( left < right) {
             int sum = arr[left] + arr[right];
 
             if ( sum == target) {
-                answer[0] = left;
-                answer[1] = right;
-
-                return answer;
+                return new int[]{left,right};
             }
 
             else if ( sum > target) {
