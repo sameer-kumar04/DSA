@@ -1,4 +1,4 @@
-package array.sorting;
+package array.sortingP5;
 
 import static array.twoPointersP4.Reversearray.printArray;
 
