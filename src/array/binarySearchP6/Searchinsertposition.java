@@ -9,15 +9,13 @@ public class Searchinsertposition {
     public static int findInsertPositionOrSearch(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
+        int answer = nums.length;
 
         while ( start <= end ) {
             int mid = start + ( end - start ) / 2;
 
-            if ( nums[mid] == target) {
-                return mid;
-            }
-
-            else if ( nums[mid] > target) {
+            if( nums[mid] >= target ){
+                answer = mid;
                 end = mid - 1;
             }
 
@@ -25,6 +23,6 @@ public class Searchinsertposition {
                 start = mid + 1;
         }
     }
-    return start;
+    return answer;
 }
 }
