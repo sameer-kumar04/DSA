@@ -13,29 +13,28 @@ public class Ceilingofanumber {
         }
 
 
-        if ( target > arr[arr.length - 1] ){//if the target element is greater than the greatest elemnt in the array
+        if ( target > arr[arr.length - 1] ){//if the target element is greater than the greatest element in the array
             return -1;
         }
 
         int start = 0;
         int end = arr.length - 1;
+        int answer = -1;
 
         while ( start <= end ) {
             int mid = start + (end - start) / 2;
 
-            if ( arr[mid] == target) {
-                return mid;
-            }
-
-            else if ( arr[mid] < target) {
-                start = mid + 1;
+            if ( arr[mid] >= target ){
+                answer = mid; //potential answer found
+                end = mid - 1;
             }
 
             else {
-                end = mid - 1;
+                start = mid + 1;
             }
+
         }
 
-        return arr[start];
+        return answer;
     }
 }
