@@ -2,14 +2,12 @@ package linkedlist;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList(1);
-
-
+        DoublyLinkedList list = new DoublyLinkedList(0);
+        list.append(1);
         list.append(2);
-        list.append(3);
-//        System.out.println(list.removeFirst().value);
+
+        list.remove(1);
 
         list.printList();
-        System.out.println(list.get(2).value);
     }
 }
