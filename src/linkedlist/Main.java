@@ -7,8 +7,9 @@ public class Main {
 
         list.append(2);
         list.append(3);
-        System.out.println(list.removeFirst().value);
+//        System.out.println(list.removeFirst().value);
 
         list.printList();
+        System.out.println(list.get(2).value);
     }
 }
