@@ -199,4 +199,55 @@ public class LinkedList {
     public void getLength() {
         System.out.println("Length : " + length);
     }
+
+    //Question
+    public Node findMiddle() {
+        Node fast = head;
+        Node slow = head;
+
+        while ( fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        return slow;
+    }
+
+    //Question : hasLoop
+    public boolean hasLoop() {
+        Node slow = head;
+        Node fast = head;
+
+        while ( fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if ( slow == fast ) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    //Question
+    public int getKthFromLast(Node head, int k) {
+
+        Node fast = head;
+        Node slow = head;
+
+        for ( int i = 0; i < k; i++) {
+            if ( fast == null ) {
+                return -1;
+            }
+            fast = fast.next;
+        }
+
+        while ( fast != null ){
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        return slow.value;
+    }
 }
