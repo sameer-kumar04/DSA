@@ -80,7 +80,7 @@ public class LinkedList {
         tail.next = null;
         length--;
 
-        if ( length == 0 ){
+        if ( length == 0 ){ // after decrementing the length , head and tail is pointing to the one element
             head = null;
             tail = null;
         }
