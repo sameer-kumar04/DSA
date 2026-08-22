@@ -250,4 +250,9 @@ public class LinkedList {
 
         return slow.value;
     }
+
+    //Question : removeDuplicates
+    public Node removeDuplicates() {
+
+    }
 }
