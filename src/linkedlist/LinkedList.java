@@ -188,6 +188,34 @@ public class LinkedList {
         }
     }
 
+    public void delete(int value) { //for removing the node of particular value
+        Node temp = head;
+
+        if ( head == null ) {//if list is empty
+            return;
+        }
+
+        if ( head.value == value ) {
+            removeFirst();
+            return;
+
+        }
+
+        if ( tail.value == value ) {
+            removeLast();
+            return;
+        }
+
+        while ( temp.next != null) {
+            if ( temp.next.value == value ) {
+                temp.next = temp.next.next;
+                length--;
+                return;
+            }
+            temp = temp.next;
+        }
+    }
+
     public void getHead() {
         System.out.println("Head : " + head.value);
     }
@@ -251,8 +279,4 @@ public class LinkedList {
         return slow.value;
     }
 
-    //Question : removeDuplicates
-    public Node removeDuplicates() {
-
-    }
 }

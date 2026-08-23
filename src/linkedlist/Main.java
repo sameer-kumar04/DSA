@@ -9,6 +9,11 @@ public class Main {
 
         list.printList();
 
-        System.out.println(list.findMiddle().value);
+        list.delete(1);
+        list.delete(2);
+        list.delete(4);
+        list.printList();
+
+        list.getLength();
     }
 }
