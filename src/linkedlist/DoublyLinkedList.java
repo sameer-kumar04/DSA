@@ -205,6 +205,23 @@ public class DoublyLinkedList {
 
     }
 
+//    public void reverse() {
+//        if ( head == null || head.next == null ) {
+//            return;
+//        }
+//
+//        Node last = null;
+//        Node current = head;
+//
+//        while ( current != null ) { //swapping the behavior of current and next pointer
+//            last = current.prev;
+//            current.prev = current.next;
+//            current.next = last;
+//
+//            current = current.prev;
+//        }
+//    }
+
 
     public void getHead() {
         System.out.println("Head : " + head.value);

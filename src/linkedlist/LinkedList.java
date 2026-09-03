@@ -177,15 +177,22 @@ public class LinkedList {
         head = tail;
         tail = temp;
 
-        Node after = temp.next;
         Node before = null;
 
-        for (int i = 0; i < length; i++) {
-            after = temp.next;
+        //if no length of linkedlist is given
+        while ( temp != null ) {
+            Node after = temp.next;
             temp.next = before;
             before = temp;
             temp = after;
         }
+
+//        for (int i = 0; i < length; i++) {if length is given
+//            Node after = temp.next;
+//            temp.next = before;
+//            before = temp;
+//            temp = after;
+//        }
     }
 
     public void delete(int value) { //for removing the node of particular value
