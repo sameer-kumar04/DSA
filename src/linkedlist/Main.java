@@ -9,7 +9,7 @@ public class Main {
 
         list.printList();
 
-        list.reverse();
+//        list.reverse();
 
         list.printList();
     }
