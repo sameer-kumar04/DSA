@@ -52,7 +52,6 @@ public class Stack {
         height--;
 
         return temp;
-
     }
 
     public void getTop() {
